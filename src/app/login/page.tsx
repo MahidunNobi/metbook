@@ -35,15 +35,15 @@ function Page(){
         })
     }
     
-     const userLogin = async()=>{
+     const userLogin = async()=>{     
         try {
             setLoading(true)
             const response = await axios.post("/api/auth/login", credentials) 
             // router.push("/feed")
+            console.log(response.data)
 
-        } catch (e) {
-            const error = e as AxiosError
-            // setErr({status:true, message: error.response.data.message})
+        } catch (error:any) {            
+            setErr({status:true, message: error.response.data.message})
             console.log(error);
         }finally{
             setLoading(false)            
@@ -56,10 +56,11 @@ function Page(){
             setErr({status: true, message:"All the fields are required."})
         }else{
             setErr({status: false, message:""})
-            // userLogin()
+            userLogin()
         }
 
     }
+    
 return (
     <div>
     <div className="container mx-auto flex justify-center min-h-screen items-center  ">
