@@ -18,8 +18,7 @@ export default function Page(){
         async function getPosts(){
          setLoading(true)
          try {
-           const res = await axios.get("./api/post")   
-           console.log(res.data);              
+           const res = await axios.get("./api/post")                     
            setAllPosts(res.data.posts)
          } catch (error:any) {
            console.log(error.message);

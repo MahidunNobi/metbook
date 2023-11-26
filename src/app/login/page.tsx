@@ -1,8 +1,9 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Link from 'next/link'
 import axios, { AxiosError } from 'axios'
 import { useRouter } from 'next/navigation'
+import { UserContext } from '@/context/UserContext'
 
 function Page(){
 
@@ -15,6 +16,8 @@ function Page(){
         status: boolean,
         message: string
     }
+
+    const context = useContext(UserContext)
 
     const router= useRouter()
     const [credentials, setCredentials] = useState<credentialsType>({
@@ -38,9 +41,8 @@ function Page(){
      const userLogin = async()=>{     
         try {
             setLoading(true)
-            const response = await axios.post("/api/auth/login", credentials) 
-            router.push("/feed")          
-
+            const response = await axios.post("/api/auth/login", credentials)            
+            router.push("/feed")       
         } catch (error:any) {            
             setErr({status:true, message: error.response.data.message})
             console.log(error);
@@ -48,6 +50,7 @@ function Page(){
             setLoading(false)            
         }
     }
+
 
     const handleLogin= (e:React.MouseEvent<HTMLButtonElement>)=>{
         e.preventDefault()
@@ -70,6 +73,7 @@ return (
             placeholder='Username'
             name="username"
             id="username"
+            value={credentials.username}
             className='bg-transparent px-4 py-2 mb-3 border-2 border-[#ff6e40] w-full rounded-lg'
             onChange={handleChange}
             />                
@@ -78,6 +82,7 @@ return (
             placeholder='Password'
             name="password"
             id="password"
+            value={credentials.password}
             className='bg-transparent px-4 py-2 mb-3 border-2 border-[#ff6e40] w-full rounded-lg'
             onChange={handleChange}
             /> 

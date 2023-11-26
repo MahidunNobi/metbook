@@ -14,8 +14,7 @@ export default function UserLayout({
 
     const context = useContext(UserContext)    
  
-    const fetchUser = async()=>{
-        if(context.state.username=== ""){
+    const fetchUser = async()=>{       
             try {
                 setLoading(true)
                 const res = await axios.post("/api/getUserData")
@@ -24,20 +23,15 @@ export default function UserLayout({
                 console.log(error.message)
             }finally{
                 setLoading(false)
-            }
-        }else{
-            return
-        }
+            }        
     }
 
     useEffect(()=>{
         fetchUser()
     }, [])
     
-
-
     return(
-        <main className="bg-gray-200">
+        <main className="bg-gray-200 min-h-screen">
             {loading? <h1 className=" text-3xl p-24"> Loading...</h1> 
             :
             <>

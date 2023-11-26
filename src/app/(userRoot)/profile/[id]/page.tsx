@@ -68,7 +68,7 @@ console.log(user);
       </main>
       :
       
-      <h1 className='text-2xl'> Loading...</h1>      
+      <h1 className='text-4xl p-24'> Loading...</h1>      
     }
       </>
   )
