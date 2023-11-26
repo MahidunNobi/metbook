@@ -6,7 +6,13 @@ export type likeType={
   }
 export type userType={
     img:string,
-    username: string
+    username: string,
+    city: string,
+    country:string,
+    email: string,
+    posts: postType[],
+    _id: string,
+    mobile: number
   }
 export type commentType={
     _id: string,
