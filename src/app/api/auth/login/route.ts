@@ -36,7 +36,7 @@ export async function POST(req:NextRequest) {
 
         const response = NextResponse.json({message: "Loged In successfully", userData: {...tokenData, city, country, mobile, img}}, {status: 200})
         
-        response.cookies.set("token", token, {expires: 8600000, httpOnly: true})
+        response.cookies.set("token", token)
         
         return response
 

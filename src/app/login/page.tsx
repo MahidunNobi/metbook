@@ -39,8 +39,7 @@ function Page(){
         try {
             setLoading(true)
             const response = await axios.post("/api/auth/login", credentials) 
-            // router.push("/feed")
-            console.log(response.data)
+            router.push("/feed")          
 
         } catch (error:any) {            
             setErr({status:true, message: error.response.data.message})
