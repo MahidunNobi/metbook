@@ -73,25 +73,27 @@ const Navbar = (data: {img: string, _id:string}) => {
         </div>
         <div className={`mobilenavigation`}>
 
-        <Link href={`/profile/${_id}`} className="flex items-center gap-3 my-2 hover:bg-gray-300 cursor-pointer">
+        <Link href={`/profile/${_id}`} onClick={()=> setShowMobileMenu(false)} className="flex items-center gap-3 my-2 hover:bg-gray-300 cursor-pointer">
             <div className="img w-[40px] h-[40px] rounded-full overflow-hidden">
               <img src={img} alt="" className="" />
             </div>
            <span>  Mahidun Nobi </span>
         </Link>
 
-          <Link href={"/feed"} className={path === "/feed" ? "active" : ""}>       
+          <Link href={"/feed"} onClick={()=> setShowMobileMenu(false)} className={path === "/feed" ? "active" : ""}>       
             <AiFillHome className='icon'/> Home            
           </Link>
-          <Link href="groups" className={path === "/groups" ? "active" : ""}>     
+          <Link href="groups" onClick={()=> setShowMobileMenu(false)} className={path === "/groups" ? "active" : ""}>     
             <AiOutlineUsergroupAdd className='icon' /> Group
           </Link>
-          <Link href="watch" className={path === "/watch" ? "active" : ""}>     
+          <Link href="watch" onClick={()=> setShowMobileMenu(false)} className={path === "/watch" ? "active" : ""}>     
            <PiTelevisionBold className='icon'/> Watch     
           </Link>
-          <Link href="marketplace" className={path === "/marketplace" ? "active" : ""}> 
+          <Link href="marketplace" onClick={()=> setShowMobileMenu(false)} className={path === "/marketplace" ? "active" : ""}> 
             <AiFillShop className='icon' /> Marketplace      
           </Link>          
+              <button onClick={handleLogout}> Logout</button>
+
         </div>
       </div>
     </nav>
