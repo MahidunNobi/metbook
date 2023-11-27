@@ -13,8 +13,7 @@ export default function Page(){
     const [loading, setLoading] = useState<boolean>(false)
 
 
-    useEffect(()=>{
-   
+    useEffect(()=>{   
         async function getPosts(){
          setLoading(true)
          try {
