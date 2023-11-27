@@ -1,0 +1,6 @@
+"use client"
+export default function Page(){
+    return (
+        <h1 className="text-xl"> Nothing to see in watch...</h1>
+    )
+}
