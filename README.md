@@ -26,9 +26,9 @@ To run this project, you will need to add the following environment variables to
 ## Features
 
 - Authentication system - (Login & Signup)
-- Email varification system after signup
+- Email verification system after signup
 - Forget Password functionality.
-- Protected routes for loged in users.
+- Protected routes for logged-in users.
 - Post creating functionality
 - Like and comment functionality
 - Profile page with posts the user posted.
