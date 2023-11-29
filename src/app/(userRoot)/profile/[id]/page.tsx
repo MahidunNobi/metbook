@@ -19,7 +19,7 @@ const Page = () => {
     const [showCreatePost, setShowCreatePost] = useState<boolean>(false)
     const [user, setUser] = useState<userType|null>(null)
     const [loading, setLoading] = useState<boolean>(false)    
-console.log(user);
+
 
     const getPosts = async()=>{
       try {

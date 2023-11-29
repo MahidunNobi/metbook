@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className='text center w-full min-h-screen flex flex-col justify-center items-center text-xl'>
+    <main className='text center w-full min-h-screen flex flex-col justify-center items-center text-xl p-3'>
       <h1 className='text-3xl md:text-6xl font font-semibold'> Hi There! 😃</h1>
       <p className=''> 
         This is a social media app. Main purpose of this website is to showcase the skills and ablity of <b> MD. Mahidun Nobi </b> 
@@ -30,6 +30,16 @@ export default function Home() {
         <li>- Like and comment functionality</li>
         <li>- Profile page with posts the user posted.</li>
       </ul>
+
+      <ul className=' list-item'>
+        <h2 className='text-2xl md:text-4xl font font-semibold'> Technologies:</h2>
+        <li>- Next JS 14 </li>
+        <li>- Typescript 5</li>
+        <li>- React JS 18</li>
+        <li>- Tailwindcss 3.3</li>
+        <li>- Mongoose 8</li> 
+      </ul>
+
     </main>
   )
 }
