@@ -20,7 +20,7 @@ export default function Home() {
         <Link href="/signup" className='bg-green-200 py-2 px-4 rounded-lg border-2 border-green-800 mx-2'> Sign Up </Link>
       </div>
 
-      <h3 className="text-xl text-gray-700"> Github: https://github.com/MahidunNobi/metbook </h3>
+      <h3 className="text-xl text-blue-700"> Github: <a href="https://github.com/MahidunNobi/metbook"> https://github.com/MahidunNobi/metbook </a> </h3>
 
       <ul className=' list-item'>
         <h2 className='text-2xl md:text-4xl font font-semibold'> Features:</h2>
