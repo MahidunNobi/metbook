@@ -5,6 +5,10 @@ This is a social media web application. The main purpose of this project is to s
 
 LIVE: https://metbook.vercel.app/
 
+DEMO USER:
+Username: Two
+Password: 321654
+
 ## Environment Variables ⭐⭐⭐
 
 To run this project, you will need to add the following environment variables to your .env file
