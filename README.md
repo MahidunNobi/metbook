@@ -6,8 +6,8 @@ This is a social media web application. The main purpose of this project is to s
 LIVE: https://metbook.vercel.app/
 
 ⭐DEMO USER⭐:
-Username: Two
-Password: 321654
+Username: Two ⭐
+Password: 321654 ⭐
 
 ## Environment Variables ⭐⭐⭐
 
