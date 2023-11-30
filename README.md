@@ -1,8 +1,9 @@
 
 # METBOOK Social Media Full-stack NEXT App🚀
 
-This is a social media web application. The main purpose of this project is to socase the skills of MD. Mahidun Nobi.
+This is a social media web application. The main purpose of this project is to showcase the skills of MD. Mahidun Nobi.
 
+LIVE: https://metbook.vercel.app/
 
 ## Environment Variables ⭐⭐⭐
 
